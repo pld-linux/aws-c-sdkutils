@@ -74,6 +74,5 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libaws-c-sdkutils.so
-%dir %{_includedir}/aws
 %{_includedir}/aws/sdkutils
 %{_libdir}/cmake/aws-c-sdkutils
