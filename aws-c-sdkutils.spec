@@ -13,7 +13,7 @@ Group:		Libraries
 Source0:	https://github.com/awslabs/aws-c-sdkutils/archive/v%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	e7df0c89eaf619dcd01ebc0b18310567
 URL:		https://github.com/awslabs/aws-c-sdkutils
-BuildRequires:	aws-c-common-devel
+BuildRequires:	aws-c-common-devel >= 1.0
 BuildRequires:	cmake >= 3.9
 BuildRequires:	gcc >= 5:3.2
 BuildRequires:	rpmbuild(macros) >= 1.605
@@ -32,7 +32,7 @@ Summary:	Header files for AWS C SDKUTILS library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki AWS C SDKUTILS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	aws-c-common-devel
+Requires:	aws-c-common-devel >= 1.0
 
 %description devel
 Header files for AWS C SDKUTILS library.
