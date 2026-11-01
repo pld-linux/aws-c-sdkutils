@@ -31,8 +31,8 @@ Zawiera narzędzia do analizy ARN, odczytu profili AWS itp.
 Summary:	Header files for AWS C SDKUTILS library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki AWS C SDKUTILS
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-Requires:	aws-c-common-devel >= 1.0
+Requires:	%{name}%{?_isa} = %{version}-%{release}
+Requires:	aws-c-common-devel%{?_isa} >= 1.0
 
 %description devel
 Header files for AWS C SDKUTILS library.
