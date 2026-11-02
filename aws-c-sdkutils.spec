@@ -6,7 +6,7 @@ Summary:	AWS C SDKUTILS library
 Summary(pl.UTF-8):	Biblioteka AWS C SDKUTILS
 Name:		aws-c-sdkutils
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries
 #Source0Download: https://github.com/awslabs/aws-c-sdkutils/releases
@@ -17,6 +17,7 @@ BuildRequires:	aws-c-common-devel >= 1.0
 BuildRequires:	cmake >= 3.9
 BuildRequires:	gcc >= 5:3.2
 BuildRequires:	rpmbuild(macros) >= 1.605
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,6 +43,8 @@ Pliki nagłówkowe biblioteki AWS C SDKUTILS.
 
 %prep
 %setup -q
+
+%{__sed} -i -e '/^ *PATH_SUFFIXES / s,lib/cmake/aws-,%{_lib}/cmake/aws-,' CMakeLists.txt
 
 %build
 install -d build
